@@ -4,9 +4,12 @@
 	</head>
 	<body>
 		<form action="/" method="POST">
-			Height: <input type="number" name="height"/>
-			Coefficient: <input type="number" name="coef" min=0 max=1 step='0.1'/>
+			Height: <input type="number" name="height" min=1 step='1' required/>
+			Coefficient: <input type="number" name="coef" min=0 max=1 step='0.1' required/>
 			<input type="submit"/>
+		</form>
+		<form action="/history" method="GET">
+			<input type="submit" value="Click here to see past calculations"/>
 		</form>
 	</body>
 </html>
