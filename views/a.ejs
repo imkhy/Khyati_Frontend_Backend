@@ -1,7 +1,9 @@
 <html>
-<head> 
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script type="text/javascript">
 		var data=<%-JSON.stringify(data)%>;
 		window.onload = function () {
@@ -27,7 +29,7 @@
 </script>
 </head>  
 <body>
-	
+	<div class="container">
 	<% if(c==1){%>
 	<h1>
 			Perfectly Elastic Collision!Try entering coeff. of restitution in [0,1)! (1 not included)
@@ -38,9 +40,12 @@
 		Bounces : <%=bounce%>
 		</h1>
 	<%}%>
-	<a href="/">Check graph for other inputs</a>
+	<a href="/" class="btn btn-md btn-primary">Check graph for other inputs</a>
 	<form action="/history" method="GET">
-			<input type="submit" value="Click here to see past calculations"/>
+	<div class="input-group" style="margin:3% 0">
+		<button class="btn btn-md btn-primary">Click here to see past calculations</button>
+	</div>
 	</form>
+	</div>
 </body>
 </html>

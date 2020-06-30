@@ -1,6 +1,6 @@
 var express = require("express"),
-	app = express(),
-	bodyParser = require("body-parser");
+app = express(),
+bodyParser = require("body-parser");
 
 const fs = require("fs");
 app.use(bodyParser.json());
